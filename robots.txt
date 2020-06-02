@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /sessions/
+Disallow: /webgeek/
+
+User-agent: Googlebot
+Allow: /assets/

@@ -1,0 +1,44 @@
+#skill { 
+    list-style:none; 
+    padding:30px 0 0;
+    margin: 0 auto;
+    max-width: 300px;
+}
+#skill li { 
+    position:relative;
+    margin-bottom:30px; 
+    background:#000; 
+    height:12px; 
+    border-radius:3px; 
+    border-left:1px solid #111; 
+    border-top:1px solid #111; 
+    border-right:1px solid #333; 
+    border-bottom:1px solid #333;
+}
+#skill li em { 
+    position:relative; 
+    top:-20px;
+}
+
+.expand { 
+    height:8px; 
+    margin:2px 0; 
+    background:#4CAF50; 
+    position:absolute;
+    left:0;
+}
+
+.active ul .html       { width:85%;  -moz-animation:html 2s ease-out;       -webkit-animation:html 2s ease-out;       }
+.active ul .css         { width:80%;  -moz-animation:css 2s ease-out;        -webkit-animation:css 2s ease-out;        }
+.active ul .js         { width:10%;  -moz-animation:js 2s ease-out;      -webkit-animation:js 2s ease-out;      }
+.active ul .php        { width:5%;  -moz-animation:php 2s ease-out;   -webkit-animation:photoshop 2s ease-out;   }
+
+@-moz-keyframes html { 0%  { width:0px;} }
+@-moz-keyframes css  { 0%  { width:0px;} }
+@-moz-keyframes js   { 0%  { width:0px;} }
+@-moz-keyframes php  { 0%  { width:0px;} }
+
+@-webkit-keyframes html       { 0%  { width:0px;} }
+@-webkit-keyframes css        { 0%  { width:0px;} }
+@-webkit-keyframes js      { 0%  { width:0px;} }
+@-webkit-keyframes php   { 0%  { width:0px;} }

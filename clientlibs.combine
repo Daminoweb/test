@@ -1,0 +1,12 @@
+{
+    "combineOnSave": false,
+    "combine": [
+        {
+            "output": "assets/styles.min.css",
+            "files": [
+                "assets/style.min.css",
+                "assets/skills.min.css"
+            ]
+        }  
+    ]
+}

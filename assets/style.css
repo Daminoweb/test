@@ -1,0 +1,218 @@
+/* e74c3c*/
+
+body, html, section, div {
+    margin:0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'helsinkiregular';
+    src: url('helsinki-webfont.eot');
+    src: url('helsinki-webfont.eot?#iefix') format('embedded-opentype'),
+         url('helsinki-webfont.woff') format('woff'),
+         url('helsinki-webfont.ttf') format('truetype'),
+         url('helsinki-webfont.svg#helsinkiregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+noscript {
+    z-index: 50;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,.8);
+    color: white;
+    font-family: helsinkiregular, arial;
+}
+section {
+    display: block;
+    overflow-x: hidden;
+    background-color: #2196F3;
+    color:#F5F5F5;
+    width: 100%;
+    font-family: "Ubuntu Mono", sans-serif;
+    font-size: 1.2em;
+    /* padding-bottom: 200px; */
+}
+section:nth-of-type(2n) {
+    background-color: #4CAF50;
+}
+.inner {
+    width:95%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+figure{
+    margin:0 0 1em;
+}
+/*Pour jouer l'effet au reload de la page*/
+img {
+			-webkit-animation-name: toto;
+			        animation-name: toto;
+			-webkit-animation-duration:2s;
+			        animation-duration:2s;
+			-webkit-transform:scale(1);
+			        transform:scale(1);
+		}
+@-webkit-keyframes toto {
+    from {-webkit-transform:scale(0);transform:scale(0);}
+    to {-webkit-transform:scale(1);transform:scale(1);}
+}
+@keyframes toto {
+    from {-webkit-transform:scale(0);transform:scale(0);}
+    to {-webkit-transform:scale(1);transform:scale(1);}
+}
+
+.js figure {
+    -webkit-transform: scale(0);
+                transform: scale(0);
+    -webkit-transition: all .7s ease-in .3s;
+            -webkit-transition:all .7s ease-in .3s;
+            transition:all .7s ease-in .3s;
+}
+
+figure.actif {
+    -webkit-transform:scale(1);
+                transform:scale(1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    font-family: helsinkiregular, arial,cursive;
+    font-size: 2em;
+    text-shadow: 0 0 5px black;
+}
+h2 {
+    font-size: 1em;
+    font-style: italic;
+}
+.caracteristiques {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 1em;
+}
+a {
+    color:#FBC02D;
+    text-decoration: none;
+    /*outline: none;*/
+}
+/*:focus {
+-moz-outline-style: none;
+}
+:-moz-any-link:focus {
+outline: none;
+}*/
+a:hover {
+    color:black;
+    text-decoration: underline;
+}
+/* em a {
+    text-decoration: underline;
+} */
+aside {
+    position: fixed;
+    bottom:10px;
+    right:10px;
+    z-index: 10;
+}
+.ombre {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.sprite {
+    width: 36px;
+    height: 36px;
+    background-image: url("../images/sprite.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: block;
+    border-radius: 50%;
+}    
+/* .sprite:hover {
+    background-position: -36px 0;
+} */
+.icones {
+    background-image: url("../images/icones.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+}
+.icones ~ .icones {
+    margin-top: 1em;
+}
+.mail {
+    background-position: -36px 0;
+}
+.competence {
+    background-position: 0 0;
+}
+.outils {
+    background-position: -72px 0;
+}
+nav {
+    display: none;   
+}
+/*==============
+    Petits écrans
+===============*/
+/*@media screen and (max-width: 600px) {
+    section:first-of-type {
+        height: 100vh;
+    }
+}
+@media screen and (max-width: 600px) and (max-height:400px){
+    section:first-of-type {
+        height: 100%;
+    }
+}*/
+
+/*==============
+    Bureaux
+===============*/
+@media screen and (min-width: 600px) and (min-height:400px) {
+    .js nav {
+        display:block;
+        position:fixed;
+        top:50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        right:0;
+    }
+    .ie8 .js nav {
+        top:35%;
+        height:100px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .inner {
+        width:80%;
+        max-width: 980px;
+    }
+    nav ul {
+        margin: 0;
+        padding: 0;
+    }
+    nav li {
+        list-style: none;
+        padding: 10px 23px;
+    }
+    nav a {
+        display: block;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #FBC02D;
+    }
+    nav a:hover, nav a.actif {
+        background-color: black;
+    }
+    .sprite:hover {
+    background-position: -36px 0;/*sur bureau car sinon le hover reste "bloqué*/
+    }
+}
